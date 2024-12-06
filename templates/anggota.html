@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>{{Title}}</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#test').DataTable();
+        } );
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+        <h1 style="text-align: center;">{{Title}}</h1>
+        <h2 style="text-align: center;">{{Heading}}</h2>
+        <table id="test" class="display" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>KODE ANGGOTA</th>
+                    <th>NAMA ANGGOTA</th>
+                    <th>JENIS KELAMIN</th>
+                    <th>TELEPON</th>
+                    <th>ANGKATAN</th> 
+                    <th>ALAMAT</th> 
+                </tr>
+            </thead>
+            <tbody>
+            {%for anggota in Anggota%}
+                <tr>
+                    <td>{{anggota.kode_anggota}}</td>
+                    <td>{{anggota.nama_anggota}}</td>
+                    <td>{{anggota.jenis_kelamin}}</td>
+                    <td>{{anggota.telepon}}</td>
+                    <td>{{anggota.angkatan}}</td>
+                    <td>{{anggota.alamat}}</td>
+                </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

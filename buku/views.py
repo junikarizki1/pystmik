@@ -8,4 +8,4 @@ def index(request):
         'Heading':'Daftar Buku Ilmu Komputer',
         'Buku':buku,
     }
-    return render(request,'index.html',context)
+    return render(request,'buku.html',context)
