@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index),
     path('buku/',include('buku.urls')),
     path('anggota/',include('anggota.urls')),
+    path('penerbit/',include('penerbit.urls')),
 ]
