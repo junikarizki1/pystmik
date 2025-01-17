@@ -1,5 +1,6 @@
 from django.db import models
 from penerbit.models import Publisher
+
 class Book(models.Model):
     kode_buku=models.CharField(max_length=4)
     judul_buku=models.CharField(max_length=100)
